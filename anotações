@@ -1,0 +1,12 @@
+-p 8080:80 => Antes do ':' é a porta da máquina host. Depois do ':' é a porta do container.
+-it => executar em modo iterativo
+-a => attach
+-v $(pwd)/not-found:/usr/share/nginx/html -> mapeamento de volume. Antes do ':' é a pasta do host. depois da ':' é a pasta do container
+-d => modo deamon
+docker container inspect => Informações detalhadas de configuração do container
+docker log => mostra no terminal os logs do container
+docker network connect {net1} {net2} => Conecta uma rede a outra
+docker netword --driver {driver} {name}
+docker network disconnect {net1} {net2}
+
+docker-compose up -d --scale {service}={qtd}
